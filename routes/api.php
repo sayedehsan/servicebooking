@@ -3,6 +3,7 @@
 // use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ServiceController;
 
 
 // Route::get('/user', function (Request $request) {
@@ -15,4 +16,9 @@ Route::post('register', [UserController::class, 'register'])->name('register');
 Route::middleware('auth:sanctum')->group(function(){
     Route::get('profile', [UserController::class, 'profile'])->name('profile');
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
+
+    Route::get('services', [ServiceController::class, 'index'])->name('services.index');
+    Route::post('services', [ServiceController::class, 'create'])->name('services.create');
+    Route::put('services/{service}', [ServiceController::class, 'update'])->name('services.update');
+    Route::delete('services/{service}', [ServiceController::class, 'delete'])->name('services.delete');
 });
