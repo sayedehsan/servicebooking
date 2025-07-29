@@ -64,7 +64,7 @@ class UserController extends Controller
         $user = User::create(array_merge(
             $validator->validated(),
             ['password' => Hash::make($request->password)]),
-            ['user_type' => "user"]
+            ['user_type' => "customer"]
         );
         // Generate a token for the user
         $token = $user->createToken($user['email'])->plainTextToken;

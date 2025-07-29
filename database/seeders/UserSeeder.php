@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'name' => 'Rahat Murshed',
             'email' => 'rahat@gmail.com',
             'password' => Hash::make('password'),
-            'user_type' => 'user',
+            'user_type' => 'customer',
         ]);
 
         // Regular User 2
@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
             'name' => 'Sayed Ehsan',
             'email' => 'ehsan@gmail.com',
             'password' => Hash::make('password'),
-            'user_type' => 'user',
+            'user_type' => 'customer',
         ]);
     }
 }
