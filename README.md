@@ -48,11 +48,11 @@ A RESTful PHP backend for a Service Booking system.
    php artisan serve
    ```
 
-## Test User
-   # Admin
+# Test User
+   ## Admin
       -Email: admin@example.com
       -Pass : password
-   # User
+   ## User
       -Email: rahat@gmail.com
       -Pass : password
 
