@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\BookingController;
 
 
 // Route::get('/user', function (Request $request) {
@@ -21,4 +22,9 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('services', [ServiceController::class, 'create'])->name('services.create');
     Route::put('services/{service}', [ServiceController::class, 'update'])->name('services.update');
     Route::delete('services/{service}', [ServiceController::class, 'delete'])->name('services.delete');
+
+    Route::get('bookings', [BookingController::class, 'index'])->name('bookings.index');
+    Route::get('bookingsbyuser/{user}', [BookingController::class, 'listByUser'])->name('bookings.listByUser');
+    Route::post('bookings', [BookingController::class, 'create'])->name('bookings.create');
+    Route::put('bookings/{booking}', [BookingController::class, 'update'])->name('bookings.update');
 });
